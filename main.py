@@ -1,11 +1,12 @@
+import Timer
 
 def main():
-    global tasks
+
     tasks = []
 
     is_running = True
     while is_running:
-        question = """1- Add task \n2- Mark the complete task \n3- View tasks \n4- Quite"""
+        question = """1- Add task \n2- Mark the complete task \n3- View tasks \n4- Timer for Task \n5- Quite"""
         print(question)
 
         choice = int(input("Enter your choice (should be a number between 1 and 4) : "))
@@ -18,6 +19,8 @@ def main():
             Comp_Task(tasks)
         elif choice == 3:
             View_Task(tasks)
+        elif choice == 4:
+            Start_Task(tasks)
         else:
             print("="*30+"\nHave nice day")
             is_running = False
@@ -56,6 +59,9 @@ def View_Task(tasks):
             print(f"{task[0]["task"]} {"✅"}\n")
         else:
             print(f"{task[0]["task"]} {"❌"}\n")
+
+def Start_Task(tasks):
+    Timer.timer()
     
 
 
