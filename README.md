@@ -1,5 +1,5 @@
 # To_Do_List
-built a to do list for practice the basic 
+built a to do list to practice the basic 
 
 ## The application role is  : 
 - Add tasks
